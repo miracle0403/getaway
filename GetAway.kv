@@ -1,0 +1,70 @@
+<MyGrid>
+    name: name
+    username: username
+    email: email
+    password: password
+    retypepassword: retypepassword
+    usertype: usertype
+
+
+    GridLayout
+        cols: 1
+        size: root.width, root.height
+
+        GridLayout
+            cols: 1
+
+            Label:
+                text: "ADD NEW USER"
+
+
+        GridLayout
+            cols: 2
+
+            Label:
+                text: "Full Name"
+
+            TextInput:
+                id:name
+                multiline: False
+
+
+            Label:
+                text: "Username"
+
+            TextInput:
+                id:username
+                multiline: False
+
+            Label:
+                text: "Email"
+
+            TextInput:
+                id:email
+                multiline: False
+
+            Label:
+                text: "Password"
+
+            TextInput:
+                id:password
+                multiline: False
+
+            Label:
+                text: "Re-type Password"
+
+            TextInput:
+                id:retypepassword
+                multiline: False
+
+            Label:
+                text: "Type of User"
+
+            TextInput:
+                id:usertype
+                multiline: False
+
+        Button:
+            text: "Submit"
+            font_size: 32
+            on_press: root.press()
