@@ -2,7 +2,8 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.textinput import TextInput
 from kivy.properties import ObjectProperty
-
+from kivy.uix.boxlayout import BoxLayout
+import mysqlfile
 
 class MyGrid(Widget):
     name = ObjectProperty(None)
@@ -20,18 +21,11 @@ class MyGrid(Widget):
         retypepassword = self.retypepassword.text
         usertype = self.usertype.text
 
-        field-input = [name, username, email, password, retypepassword, usertype]
-        error = []
-        for n in fields:
-            if len(n) < 8 and n is not retypepassword:
-                error.append(f"{n} must not be less than 8 characters")
-
-            elif password is not retypepassword:
-                error.append("Password Must Match")
-
-            print(error)
+        # field-input = [name, username, email, password, retypepassword, usertype]
 
 
 class GetAwayApp(App):
     def build(self):
+
         return MyGrid()
+

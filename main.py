@@ -1,5 +1,5 @@
 from getawayfile import GetAwayApp
 
 getaway = GetAwayApp()
-
-getaway.run()
+if __name__ == "__main__":
+    GetAwayApp().run()
